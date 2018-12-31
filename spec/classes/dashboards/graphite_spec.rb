@@ -17,7 +17,7 @@ describe 'puppet_metrics_dashboard::dashboards::graphite' do
         PRE_COND
       end
 
-      it do
+      it 'should contain Grafana_dashboard[Graphite Puppetserver Performance]' do
         is_expected.to contain_grafana_dashboard('Graphite Puppetserver Performance').with(
           grafana_url: 'http://localhost:3000',
           grafana_user: 'admin',
